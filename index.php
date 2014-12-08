@@ -48,8 +48,6 @@ echo $result ." affectations";*/
 
 //snmpwalk("127.0.0.1", "public", null);
 
-$a = snmpwalk("localhost", "public", "");
- 
-foreach ($a as $val) {
-	echo "$val\n";
-}
+include_once 'controleur/NetworkManager.php';
+
+print_r(NetworkManager::extractMacAdresses());
