@@ -14,8 +14,8 @@
  */
 class NetworkManager {
     
-    function extractMacAdresses(){
-        $tab[];
+    public static function extractMacAdresses(){
+        
         exec("arp -a",$tab);
         foreach ($tab as $value){
             $value = str_replace("? (","",$value);
