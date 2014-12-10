@@ -8,46 +8,45 @@ ini_set('display_errors','On');
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-echo "TEST </br>";
 
-//include_once 'modele/ConnectionManager.class.php';
-//ConnectionManager::getInstance();
+// Initialisation
+include 'global/init.php';
 
-include_once 'modele/User.class.php';
+// Début de la tamporisation de sortie
+ob_start();
 
-//print_r(User::getAllUser());
+// Si un module est specifié, on regarde s'il existe
+if (!empty($_GET['page'])) {
 
-//$username = User::getUserById(1);
+	$page = dirname(__FILE__).'/controleur/'.$_GET['page'].'.php';
+	
+	// Si l'action est specifiée, on l'utilise, sinon, on tente une action par défaut
+	$action = (!empty($_GET['action'])) ? $_GET['action'].'.php' : 'index.php';
+	
+	// Si l'action existe, on l'exécute
+	if (is_file($page.$action)) {
 
-/*if(is_object($username)){
-  echo $username->pseudo;
-  echo $username->id;
-  echo $username->isadmin;
-  echo $username->macadress;
-}*/
+		include $page.$action;
 
-/*$user = new stdClass();
+	// Sinon, on affiche la page d'accueil !
+	} else {
 
-$user->pseudo = "Layla";
-$user->macadress = "MADOUDOU";
-*/
+		include 'global/accueil.php';
+	}
 
-//$nbreresult = User::deleteUserByMacAdress("MADOUDOU");
+// Module non specifié ou invalide ? On affiche la page d'accueil !
+} else {
 
-//echo "Nbre insertion : ".$nbreresult;
+	include 'global/accueil.php';
+}
 
-/*$user = new stdClass();
+// Fin de la tamporisation de sortie
+$contenu = ob_get_clean();
 
-$user->pseudo = "Lody";
-$user->macadress = "ZZZZZZZZ";
-$user->id = 1;
+// Début du code HTML
+include 'global/haut.php';
 
-$result = User::updateUserPseudo($user);
+echo $contenu;
 
-echo $result ." affectations";*/
-
-//snmpwalk("127.0.0.1", "public", null);
-
-include_once 'controleur/NetworkManager.php';
-
-print_r(NetworkManager::extractMacAdresses());
+// Fin du code HTML
+include 'global/bas.php';

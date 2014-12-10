@@ -12,7 +12,7 @@
  * @author lodydody
  */
 
-include_once 'ConnectionManager.class.php';
+include_once 'lib/ConnectionManager.class.php';
 
 class Participant {
     

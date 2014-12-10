@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-include_once 'ConnectionManager.class.php';
+include_once 'lib/ConnectionManager.class.php';
 
 class Party 
 {
