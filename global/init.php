@@ -24,5 +24,8 @@ if (1 == get_magic_quotes_gpc())
 	array_walk_recursive($_COOKIE, 'remove_magic_quotes_gpc');
 }
 
+// Demarrage session
+session_start();
+
 // Inclusion de ConnectionManager, potentiellement utile partout
 include_once 'lib/ConnectionManager.class.php';
