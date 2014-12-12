@@ -18,7 +18,7 @@ ob_start();
 // Si un module est specifié, on regarde s'il existe
 if (!empty($_GET['page'])) {
 
-	$page = dirname(__FILE__).'/controleur/'.$_GET['page'].'.php';
+	$page = '/controleur/'.$_GET['page'].'/';
 	
 	// Si l'action est specifiée, on l'utilise, sinon, on tente une action par défaut
 	$action = (!empty($_GET['action'])) ? $_GET['action'].'.php' : 'index.php';
@@ -31,13 +31,13 @@ if (!empty($_GET['page'])) {
 	// Sinon, on affiche la page d'accueil !
 	} else {
 
-		include 'global/accueil.php';
+		include 'controle/accueil/accueil.php';
 	}
 
 // Module non specifié ou invalide ? On affiche la page d'accueil !
 } else {
 
-	include 'global/accueil.php';
+	include 'controleur/accueil/accueil.php';
 }
 
 // Fin de la tamporisation de sortie

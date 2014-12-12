@@ -16,7 +16,10 @@ class NetworkManager {
     
     public static function extractMacAdresses(){
         
-        exec("arp -a",$tab);
+        exec("arp -a -l",$tab);
+        
+        die(print_r($tab));
+        
         foreach ($tab as $value){
             $value = str_replace("? (","",$value);
             $value = str_replace(") at "," ",$value);

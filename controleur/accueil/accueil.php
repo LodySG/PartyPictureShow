@@ -6,3 +6,11 @@
  * and open the template in the editor.
  */
 
+if (!isset($_SESSION['macadress'])){
+    include 'controleur/accueil/inscription.php';
+}
+else{
+    //include 'vues/accueil.tpl';
+    
+    echo 'Hi,'.$_SESSION['pseudo'];
+}

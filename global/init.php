@@ -9,8 +9,10 @@
 // Inclusion du fichier de configuration (qui définit des constantes)
 include 'global/config.php';
 
+session_start();
+
 // Désactivation des guillemets magiques
-ini_set('magic_quotes_runtime', 0);
+/*ini_set('magic_quotes_runtime', 0);
 set_magic_quotes_runtime(0);
 
 if (1 == get_magic_quotes_gpc())
@@ -22,10 +24,13 @@ if (1 == get_magic_quotes_gpc())
 	array_walk_recursive($_GET, 'remove_magic_quotes_gpc');
 	array_walk_recursive($_POST, 'remove_magic_quotes_gpc');
 	array_walk_recursive($_COOKIE, 'remove_magic_quotes_gpc');
-}
-
-// Demarrage session
-session_start();
+}*/
 
 // Inclusion de ConnectionManager, potentiellement utile partout
-include_once 'lib/ConnectionManager.class.php';
+require 'lib/ConnectionManager.class.php';
+// Inclussion de NetworkManager
+require 'lib/NetworkManager.class.php';
+
+require 'lib/FormPrecis.class.php';
+
+require 'lib/Image.php';

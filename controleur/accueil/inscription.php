@@ -11,6 +11,19 @@
 //$hash_validation = md5(uniqid(rand(), true));
 
 
-list($pseudo, $macadress) = $formUser->get_cleaned_data('pseudo', 'macadress');
+if(!isset($_SESSION['macadress'])){
+    
+    $macadresses = NetworkManager::extractMacAdresses();
+    
+    echo $_SERVER['REMOTE_ADDR'];
+    
+    $form_user = FormPrecis::userRegisteration($macadress);
+    
+    echo $form_user;
+    
+    list($pseudo, $macadress) = $form_user->get_cleaned_data('pseudo', 'macadress');
+    
+}
+
 
 
