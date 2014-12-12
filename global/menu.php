@@ -5,8 +5,8 @@
 		
 		<ul>
 			<li><a href="index.php">Accueil</a></li>
+                        <li>(rien pour le moment)</li>
+                        <li>(rien pour le moment)</li>
 		</ul>
-		
-		(rien pour le moment)
 		
 	</div>
