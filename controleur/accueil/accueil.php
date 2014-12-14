@@ -6,11 +6,27 @@
  * and open the template in the editor.
  */
 
-if (!isset($_SESSION['macadress'])){
-    include 'controleur/accueil/inscription.php';
+require 'modele/User.class.php';
+
+$ipAdress = $_SERVER['REMOTE_ADDR'];
+
+$macadress = NetworkManager::extractMacAdress($ipAdress);
+
+$user = User::getUserByMacAdress($macadress);
+
+
+
+if ($user != FALSE){
+    
+    print_r($user);
+    
+    echo 'Hi,'.$_SESSION['pseudo'];
+    
 }
 else{
     //include 'vues/accueil.tpl';
     
-    echo 'Hi,'.$_SESSION['pseudo'];
+    $_SESSION['macadress'] = $macadress;
+    
+    include 'controleur/accueil/inscription.php';
 }

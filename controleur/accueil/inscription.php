@@ -13,9 +13,9 @@
 
 if(!isset($_SESSION['macadress'])){
     
-    $macadresses = NetworkManager::extractMacAdresses();
+    $macadress = NetworkManager::extractMacAdress($_SERVER['REMOTE_ADDR']);
     
-    echo $_SERVER['REMOTE_ADDR'];
+    echo $macadress;
     
     $form_user = FormPrecis::userRegisteration($macadress);
     

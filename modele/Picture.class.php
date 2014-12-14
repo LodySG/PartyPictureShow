@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-require 'lib/ConnectionManager.class.php';
+//require 'lib/ConnectionManager.class.php';
 
 class Picture
 {

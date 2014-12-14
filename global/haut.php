@@ -6,7 +6,7 @@
 
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-	<title>Party Picture Show</title>
+	<title>PaPiSh - Party Picture Show</title>
 
 	<meta http-equiv="Content-Language" content="fr" />
 

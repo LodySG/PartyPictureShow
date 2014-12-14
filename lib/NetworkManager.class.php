@@ -14,19 +14,17 @@
  */
 class NetworkManager {
     
-    public static function extractMacAdresses(){
+    public static function extractMacAdress($ipAdress){
         
-        exec("arp -a -l",$tab);
+        $macadress = "";
         
-        die(print_r($tab));
-        
-        foreach ($tab as $value){
-            $value = str_replace("? (","",$value);
-            $value = str_replace(") at "," ",$value);
-            $value = str_replace(" on en1 ifscope [ethernet]","",$value);
-            $value = preg_split("/[\s,]+/",$value);
-            $tableau[$value[0]] = $value[1];
+        if($ipAdress == LOCALHOST){
+            exec("/usr/sbin/arp -a|grep ".SELF_ADRESS."\)|cut -f4 -d\" \"",$macadress);
+        }else{
+            exec("/usr/sbin/arp -a|grep ".$ipAdress."\)|cut -f4 -d\" \"",$macadress);
         }
-        return $tableau;
+            
+        return $macadress[0];
+        
     }
 }
