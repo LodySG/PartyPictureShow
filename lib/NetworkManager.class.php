@@ -19,11 +19,15 @@ class NetworkManager {
         $macadress = "";
         
         if($ipAdress == LOCALHOST){
-            exec("/usr/sbin/arp -a|grep ".SELF_ADRESS."\)|cut -f4 -d\" \"",$macadress);
-        }else{
-            exec("/usr/sbin/arp -a|grep ".$ipAdress."\)|cut -f4 -d\" \"",$macadress);
-        }
+        
+            exec("arp -a|grep '".SELF_ADRESS."'\)|cut -f4 -d\" \"",$macadress);
             
+        }else{
+            
+            exec("arp -a|grep '".$ipAdress."'\)|cut -f4 -d\" \"",$macadress);
+            
+        }
+        
         return $macadress[0];
         
     }

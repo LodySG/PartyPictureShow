@@ -12,7 +12,7 @@
  * @author lodydody
  */
 
-require 'lib/Form.php';
+require_once 'lib/Form.php';
 
 class FormPrecis {
     

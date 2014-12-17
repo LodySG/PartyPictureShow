@@ -11,17 +11,54 @@
 //$hash_validation = md5(uniqid(rand(), true));
 
 
-if(!isset($_SESSION['macadress'])){
+if(!isset($_SESSION['macadress']) && !isset($_SESSION['pseudo'])){
     
-    $macadress = NetworkManager::extractMacAdress($_SERVER['REMOTE_ADDR']);
-    
-    echo $macadress;
+    $macadress = NetworkManager::extractMacAdress($ipAdress);
     
     $form_user = FormPrecis::userRegisteration($macadress);
     
-    echo $form_user;
+    // Pré-remplissage avec les valeurs précédente
+    $form_user->bound($_POST);
     
-    list($pseudo, $macadress) = $form_user->get_cleaned_data('pseudo', 'macadress');
+    
+    $erreurs_inscription = "";
+    
+    if ($form_user->is_valid($_POST)) {
+	
+        $pseudo = $form_user->get_cleaned_data('pseudo');
+        
+        $user_noovo = new stdClass();
+        
+        $user_noovo->pseudo = $pseudo;
+        $user_noovo->macadress = $macadress;
+        
+        $reponse = User::insertUser($user_noovo);
+        
+        if($reponse == 1){
+            
+            $_SESSION['pseudo'] = $pseudo;
+            $_SESSION['macadress'] = $macadress;
+            
+            header('Location: '.INDEX_FILE);
+               
+        }else{
+            
+            $erreurs_inscription = "Ca passe pas !!";
+            
+        }
+        
+    } else {
+        
+        // Affichage formulaire
+        echo $erreurs_inscription;
+        echo $form_user;
+        
+    }
+    
+    
+}else {
+    
+    header('Location: '.INDEX_FILE);
     
 }
 

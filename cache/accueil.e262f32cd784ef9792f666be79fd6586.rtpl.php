@@ -1,0 +1,1 @@
+<?php if(!class_exists('raintpl')){exit;}?><p>Hi, <?php echo $pseudo;?></p>

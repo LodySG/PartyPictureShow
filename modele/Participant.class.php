@@ -12,7 +12,7 @@
  * @author lodydody
  */
 
-//require 'lib/ConnectionManager.class.php';
+require_once 'lib/ConnectionManager.class.php';
 
 class Participant {
     

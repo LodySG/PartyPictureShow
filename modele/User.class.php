@@ -6,14 +6,14 @@
  * and open the template in the editor.
  */
 
-//require 'lib/ConnectionManager.class.php';
+require_once 'lib/ConnectionManager.class.php';
 
 class User
 {
     
     public static function insertUser($user){
         
-        $sql = "INSERT INTO users (pseudo,macadress) VALUES ('".$user->pseudo ."','".$user->macadress."')";
+        $sql = "INSERT INTO users (pseudo,macadress,firstconnection) VALUES ('".$user->pseudo ."','".$user->macadress."',NOW())";
         $conn = ConnectionManager::getInstance();
         $result = null;
         

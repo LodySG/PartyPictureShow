@@ -6,6 +6,7 @@
  * and open the template in the editor.
  */
 
+
 // Redimensionnement et sauvegarde de l'avatar
 $avatar = new Image($avatar);
 $avatar->resize_to(100, 100); // Image->resize_to($largeur_maxi, $hauteur_maxi)

@@ -4,7 +4,7 @@
 		<h2>Menu</h2>
 		
 		<ul>
-			<li><a href="index.php">Accueil</a></li>
+			<li><a href="/PartyPictureShow/">Accueil</a></li>
                         <li>(rien pour le moment)</li>
                         <li>(rien pour le moment)</li>
 		</ul>
