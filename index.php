@@ -31,7 +31,7 @@ if (!empty($_GET['page'])) {
 	// Sinon, on affiche la page d'accueil !
 	} else {
 
-		include 'controle/accueil/accueil.php';
+		include 'controleur/accueil/accueil.php';
 	}
 
 // Module non specifié ou invalide ? On affiche la page d'accueil !
