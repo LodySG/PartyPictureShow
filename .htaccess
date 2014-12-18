@@ -47,7 +47,7 @@ SetEnv TZ Europe/Paris
 
 
 #Page par défaut
-DirectoryIndex index.php
+#DirectoryIndex index.php
 
 
 #Protéger vos répertoires et fichiers
