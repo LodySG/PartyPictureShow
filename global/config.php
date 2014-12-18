@@ -1,9 +1,9 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * Développé par Dylo
+ * 
  */
 
 // Identifiants pour la base de données. Nécessaires a ConnectionManager.
@@ -15,3 +15,4 @@ define('DEFAULT_SQL_PORT',      '3306');
 define('LOCALHOST',             '::1');
 define('SELF_ADRESS',           '192.168.0.31');
 define('INDEX_FILE',            '/PartyPictureShow/');
+

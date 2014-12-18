@@ -1,12 +1,12 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors','On');
+//error_reporting(E_ALL);
+//ini_set('display_errors','On');
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * Développé par Dylo
+ * 
  */
 
 // Initialisation
@@ -16,7 +16,7 @@ include 'global/init.php';
 ob_start();
 
 // Si un module est specifié, on regarde s'il existe
-if (!empty($_GET['page'])) {
+if (!empty($_GET['page']) && isset($_SESSION['pseudo']) && isset($_SESSION['macadress'])) {
 
 	$page = '/controleur/'.$_GET['page'].'/';
 	

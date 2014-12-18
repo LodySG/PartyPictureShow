@@ -1,9 +1,9 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * Développé par Dylo
+ * 
  */
 
 // Inclusion du fichier de configuration (qui définit des constantes)
@@ -26,15 +26,11 @@ if (1 == get_magic_quotes_gpc())
 	array_walk_recursive($_COOKIE, 'remove_magic_quotes_gpc');
 }*/
 
-// Inclusion de ConnectionManager, potentiellement utile partout
+// Inclusion de libriarie, potentiellement utile partout
 require_once 'lib/ConnectionManager.class.php';
-// Inclussion de NetworkManager
 require_once 'lib/NetworkManager.class.php';
-
 require_once 'lib/FormPrecis.class.php';
-
 require_once 'lib/Image.php';
-
 require_once 'lib/rain.tpl.class.php';
 
 raintpl::configure( 'tpl_dir', 'vues/' ); // template directory

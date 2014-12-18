@@ -1,17 +1,68 @@
-
+#Configurer le fuseau horaire sur votre serveur
 SetEnv TZ Europe/Paris
 
 #Créer une page d’erreur personnalisée
-ErrorDocument 401 /error/401.php
-ErrorDocument 403 /error/403.php
-ErrorDocument 404 /error/404.php
-ErrorDocument 500 /error/500.php
+#ErrorDocument 401 /error/401.php
+#ErrorDocument 403 /error/403.php
+#ErrorDocument 404 /error/404.php
+#ErrorDocument 500 /error/500.php
 
-#Configurer le fuseau horaire sur votre serveur
-allow from all
-deny from 145.186.14.122
-deny from 124.15
+#Bloquer des adresses IP
+#allow from all
+#deny from 145.186.14.122
+#deny from 124.15
 
-#Redirection perman
+
+#Redirection permanent
 #Redirect 301 /mapage.html http://www.monsite.com/manouvellepage.html
 
+
+#Redirections de domaine
+#RewriteCond %{HTTP_HOST} ^www\.mon-site\.com [NC]
+#RewriteRule ^(.*)$ http://www.mon-site.fr/$1 [QSA,R=301]
+
+
+#Email de l'administrateur du serveur
+#ServerSignature EMail
+#SetEnv SERVER_ADMIN monadresse@monsite.com
+
+
+#Protéger ses images
+#Options +FollowSymlinks
+#RewriteEngine On
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http://(www\.)?monsite\.com/ [nc]
+#RewriteRule .*\.(gif|jpg|png)$ http://www.monsite.com/images/images-de-substitution.jpg [nc]
+
+
+#Rendre tout un site indisponible pour maintenance
+#RewriteEngine on
+#RewriteRule maintenance\.html - [L]
+#RewriteCond %{REMOTE_ADDR} !82.288.56.587
+#RewriteRule .* /maintenance.html [L]
+
+
+#Empêcher le listage des répertoires
+#Options All -Indexes
+
+
+#Page par défaut
+DirectoryIndex index.php
+
+
+#Protéger vos répertoires et fichiers
+# Protéger un  fichier
+#AuthType Basic
+#AuthName &quot;Accès restreint&quot;
+#AuthUserFile /home/path/.htpasswd
+#Require valid-user
+# Protéger un répertoire
+#AuthType basic
+#AuthName &quot;Accès restreint&quot;
+#AuthUserFile /home/path/.htpasswd
+#AuthGroupFile /dev/null
+#Require valid-user
+
+
+#Masquer ou afficher les erreurs php
+php_flag display_errors on

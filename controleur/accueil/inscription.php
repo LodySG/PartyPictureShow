@@ -1,9 +1,9 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * Développé par Dylo
+ * 
  */
 
 // Creation d'un identifiant unique
@@ -19,7 +19,6 @@ if(!isset($_SESSION['macadress']) && !isset($_SESSION['pseudo'])){
     
     // Pré-remplissage avec les valeurs précédente
     $form_user->bound($_POST);
-    
     
     $erreurs_inscription = "";
     
@@ -38,7 +37,6 @@ if(!isset($_SESSION['macadress']) && !isset($_SESSION['pseudo'])){
             
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['macadress'] = $macadress;
-            
             header('Location: '.INDEX_FILE);
                
         }else{
@@ -50,8 +48,10 @@ if(!isset($_SESSION['macadress']) && !isset($_SESSION['pseudo'])){
     } else {
         
         // Affichage formulaire
-        echo $erreurs_inscription;
-        echo $form_user;
+        $tpl = new raintpl();
+        $tpl->assign("erreurs",$erreurs_inscription);
+        $tpl->assign("form",$form_user);
+        $tpl->draw("inscription");
         
     }
     
