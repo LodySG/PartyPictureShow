@@ -11,7 +11,7 @@
 //$hash_validation = md5(uniqid(rand(), true));
 
 
-if(!isset($_SESSION['macadress']) && !isset($_SESSION['pseudo'])){
+if(!isset($_SESSION['idUser']) && !isset($_SESSION['pseudo'])){
     
     $macadress = NetworkManager::extractMacAdress($ipAdress);
     
@@ -33,11 +33,14 @@ if(!isset($_SESSION['macadress']) && !isset($_SESSION['pseudo'])){
         
         $reponse = User::insertUser($user_noovo);
         
+        
+        
         if($reponse == 1){
             
-            $_SESSION['pseudo'] = $pseudo;
-            $_SESSION['macadress'] = $macadress;
-            header('Location: '.INDEX_FILE);
+            $user = User::getUserByMacAdress($macadress);  
+            $_SESSION['pseudo'] = $user->pseudo;
+            $_SESSION['idUser'] = $user->id;
+            header('Location: '.INDEX_DIR);
                
         }else{
             
@@ -58,7 +61,7 @@ if(!isset($_SESSION['macadress']) && !isset($_SESSION['pseudo'])){
     
 }else {
     
-    header('Location: '.INDEX_FILE);
+    header('Location: '.INDEX_DIR);
     
 }
 

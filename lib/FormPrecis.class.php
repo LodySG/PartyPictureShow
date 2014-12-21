@@ -34,9 +34,13 @@ class FormPrecis {
     public static function imageUpload(){
         $form = new Form('image_uploader','POST');
         
-        $form   ->add('File','image')
+        $form   ->add('File','photo')
                 ->max_size(4000000)
                 ->filter_extensions(array('jpg', 'gif', 'png'));
+        
+        $form   ->add('Textarea','comment')
+                ->label('Commentes ta tof')
+                ->Required(false);
         
         $form   ->add('Submit', 'submit')
                 ->value('Tiens !!!');

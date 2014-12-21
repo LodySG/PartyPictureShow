@@ -32,6 +32,7 @@ require_once 'lib/NetworkManager.class.php';
 require_once 'lib/FormPrecis.class.php';
 require_once 'lib/Image.php';
 require_once 'lib/rain.tpl.class.php';
+require_once 'lib/Utils.class.php';
 
 raintpl::configure( 'tpl_dir', 'vues/' ); // template directory
 raintpl::configure( 'cache_dir', 'cache/' ); // cache directory

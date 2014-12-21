@@ -16,7 +16,7 @@ include 'global/init.php';
 ob_start();
 
 // Si un module est specifié, on regarde s'il existe
-if (!empty($_GET['page']) && isset($_SESSION['pseudo']) && isset($_SESSION['macadress'])) {
+if (!empty($_GET['page']) && isset($_SESSION['pseudo']) && isset($_SESSION['idUser'])) {
 
 	$page = 'controleur/'.$_GET['page'].'/';
 	
