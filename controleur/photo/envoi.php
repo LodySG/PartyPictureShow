@@ -59,7 +59,7 @@ if(isset($_SESSION['idUser']) && isset($_SESSION['pseudo'])){
 
         }else{
 
-            $erreurs_inscription = "la photo n'a pas pu enregistrer";
+            $erreurs_inscription = "la photo n'a pas pu être enregistrer";
             
         }
 

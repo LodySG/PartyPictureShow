@@ -146,6 +146,21 @@ class User
         
     }
     
+    public static function setLastConectionDateNow($macadress){
+        
+        $sql = "UPDATE users SET lastconnection=NOW() WHERE macadress='". $user->macadress ."'";
+        $conn = ConnectionManager::getInstance();
+        $result = NULL;
+        
+        try{
+            $result = $conn->exec($sql);
+        } catch (Exception $ex) {
+            echo "Requete erroné : ".$ex;
+        }
+        
+        return $result;
+    }
+    
     
     
 }

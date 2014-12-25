@@ -37,3 +37,4 @@ require_once 'lib/Utils.class.php';
 raintpl::configure( 'tpl_dir', 'vues/' ); // template directory
 raintpl::configure( 'cache_dir', 'cache/' ); // cache directory
 raintpl::configure( 'tpl_ext', 'tpl' ); // cache directory$tpl_ext
+raintpl::configure( 'path_replace', false ); // remplace les chemins 'vue' par le chemin racine du site

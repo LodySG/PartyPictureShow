@@ -13,7 +13,7 @@ class Picture
     
     public static function insertPicture($picture){
         
-        $sql = "INSERT INTO pictures (partyid,userid,path,comment) VALUES (". $picture->partyid .",". $picture->userid .",'". $picture->path ."','". $picture->comment ."')";
+        $sql = "INSERT INTO pictures (partyid,userid,path,comment,uploaddate) VALUES (". $picture->partyid .",". $picture->userid .",'". $picture->path ."','". $picture->comment ."',NOW())";
         $conn = ConnectionManager::getInstance();
         $result = null;
         

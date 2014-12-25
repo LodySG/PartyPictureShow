@@ -40,6 +40,11 @@ if(!isset($_SESSION['idUser']) && !isset($_SESSION['pseudo'])){
             $user = User::getUserByMacAdress($macadress);  
             $_SESSION['pseudo'] = $user->pseudo;
             $_SESSION['idUser'] = $user->id;
+            
+            Connected::connectUser($_SESSION['idUser']);
+            
+            User::setLastConectionDateNow($user->macadress);
+            
             header('Location: '.INDEX_DIR);
                
         }else{

@@ -6,9 +6,9 @@
  * 
  */
 
-require 'modele/User.class.php';
+require_once 'modele/User.class.php';
 
-
+require_once 'modele/Connected.class.php';
 
 if(!isset($_SESSION['pseudo']) && !isset($_SESSION['idUser'])){
     
@@ -22,10 +22,14 @@ if(!isset($_SESSION['pseudo']) && !isset($_SESSION['idUser'])){
     
     // Si client existe, session set up, message succes login
     if ($user != FALSE){
-    
+        
         $_SESSION['pseudo'] = $user->pseudo;
         $_SESSION['idUser'] = $user->id;
-
+        
+        User::setLastConectionDateNow($user->macadress);
+        
+        Connected::connectUser($_SESSION['idUser']);
+        
         //echo 'Hi,'.$_SESSION['pseudo'];
         //include 'vues/accueil.tpl';
         
@@ -48,6 +52,8 @@ if(!isset($_SESSION['pseudo']) && !isset($_SESSION['idUser'])){
     
     //echo 'Hi,'.$_SESSION['pseudo'];
     //include 'vues/accueil.tpl';
+    
+    Connected::connectUser($_SESSION['idUser']);
     
     $tpl = new raintpl(); //include Rain TPL
     $tpl->assign("pseudo",$_SESSION['pseudo']); // assign an array
