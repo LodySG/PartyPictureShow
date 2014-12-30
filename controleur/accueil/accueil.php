@@ -26,7 +26,7 @@ if(!isset($_SESSION['pseudo']) && !isset($_SESSION['idUser'])){
         $_SESSION['pseudo'] = $user->pseudo;
         $_SESSION['idUser'] = $user->id;
         
-        User::setLastConectionDateNow($user->macadress);
+        User::setLastConnectionDateNow($user->macadress);
         
         Connected::connectUser($_SESSION['idUser']);
         

@@ -29,7 +29,7 @@ if(isset($_SESSION['idUser']) && isset($_SESSION['pseudo'])){
         } else{
 
             $error_photo_display = "Il a rien envoyé pour l'instant ... ce CAFARD !!!";
-
+            
         }
     }else {
         

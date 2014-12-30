@@ -146,9 +146,9 @@ class User
         
     }
     
-    public static function setLastConectionDateNow($macadress){
+    public static function setLastConnectionDateNow($macadress){
         
-        $sql = "UPDATE users SET lastconnection=NOW() WHERE macadress='". $user->macadress ."'";
+        $sql = "UPDATE users SET lastconnection=NOW() WHERE macadress='".$macadress."'";
         $conn = ConnectionManager::getInstance();
         $result = NULL;
         

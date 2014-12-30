@@ -1,0 +1,24 @@
+/*
+
+Développé par Dylo
+
+*/
+/* 
+    Created on : 29 déc. 2014, 22:51:56
+    Author     : Dylo <the Boss at Boss.org>
+*/
+
+[class*="col-"], footer {
+  
+}
+
+body {
+  padding-top: 50px;
+  background: grey;
+  color:#f9f9f9;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+

@@ -4,20 +4,50 @@
 
 <head>
 
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
 
-	<title>PaPiSh - Party Picture Show</title>
+    <title>PartPicShow - Party Picture Show</title>
 
-	<meta http-equiv="Content-Language" content="fr" />
-
-	<link rel="stylesheet" href="style/global.css" type="text/css" media="screen" />
-
+    <meta http-equiv="Content-Language" content="fr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/pps.css" type="text/css" media="screen" />
+    <link rel="icon" href="">
+    <meta name="description" content="PartPicShow">
+    <meta name="author" content="LodySG">
+        
 </head>
 
 <body>
 
-	<h1>Pour les Cafards et les Cafardes</h1>
-
-<?php include 'global/menu.php'; ?>
-
-	<div id="centre">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/PartyPictureShow">PartyPictureShow</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="/PartyPictureShow?page=accueil&action=accueil">Accueil</a></li>
+                    <li class=""><a href="/PartyPictureShow?page=accueil&action=panneau">Panneau</a></li>
+                    <li class=""><a href="/PartyPictureShow?page=photo&action=mesphotos">Mes Photos</a></li>
+                    <li class=""><a href="/PartyPictureShow?page=photo&action=envoi">Envoyer une tof</a></li>
+                    <li class=""><a href="/PartyPictureShow?page=photo&action=slideshow">Slideshow</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+        
+    <header class="page-header">
+        <h1>Soiree Cafard</h1>
+    </header>
+    
+        <div class="container">
+            <div class='starter-template'>

@@ -15,50 +15,60 @@ if(!isset($_SESSION['idUser']) && !isset($_SESSION['pseudo'])){
     
     $macadress = NetworkManager::extractMacAdress($ipAdress);
     
-    $form_user = FormPrecis::userRegisteration($macadress);
-    
-    // Pré-remplissage avec les valeurs précédente
-    $form_user->bound($_POST);
-    
     $erreurs_inscription = "";
     
-    if ($form_user->is_valid($_POST)) {
+    if(isset($_POST['pseudo'])){
 	
-        $pseudo = $form_user->get_cleaned_data('pseudo');
-        
-        $user_noovo = new stdClass();
-        
-        $user_noovo->pseudo = $pseudo;
-        $user_noovo->macadress = $macadress;
-        
-        $reponse = User::insertUser($user_noovo);
-        
-        
-        
-        if($reponse == 1){
+        if($_POST['pseudo'] != ""){
             
-            $user = User::getUserByMacAdress($macadress);  
-            $_SESSION['pseudo'] = $user->pseudo;
-            $_SESSION['idUser'] = $user->id;
+            $_POST['pseudo'] = filter_var($_POST['pseudo'], FILTER_SANITIZE_STRING);
             
-            Connected::connectUser($_SESSION['idUser']);
+            if($_POST['pseudo'] == ""){
+                $erreurs_inscription = "C'est quoi ca ? ... un vrai pseudo please !";
+            }
             
-            User::setLastConectionDateNow($user->macadress);
+        }else {
             
-            header('Location: '.INDEX_DIR);
-               
-        }else{
-            
-            $erreurs_inscription = "Ca passe pas !!";
+            $erreurs_inscription = "Pffff !!! ... cris ton pseudo dans la case avant ! CAFARD !!!";
             
         }
+        
+        if($erreurs_inscription == ""){
+            
+            $user_noovo = new stdClass();
+
+            $user_noovo->pseudo = $_POST['pseudo'];
+            $user_noovo->macadress = $_POST['macadress'];
+
+            $reponse = User::insertUser($user_noovo);
+
+
+
+            if($reponse == 1){
+
+                $user = User::getUserByMacAdress($macadress);  
+                $_SESSION['pseudo'] = $user->pseudo;
+                $_SESSION['idUser'] = $user->id;
+
+                Connected::connectUser($_SESSION['idUser']);
+
+                User::setLastConnectionDateNow($user->macadress);
+
+                header('Location: '.INDEX_DIR);
+
+            }else{
+
+                $erreurs_inscription = "Ca passe pas !!";
+
+            }
+        }    
         
     } else {
         
         // Affichage formulaire
         $tpl = new raintpl();
         $tpl->assign("erreurs",$erreurs_inscription);
-        $tpl->assign("form",$form_user);
+        $tpl->assign("macadress",$macadress);
         $tpl->draw("inscription");
         
     }
