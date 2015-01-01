@@ -1,1 +1,0 @@
-<?php if(!class_exists('raintpl')){exit;}?><p>Cimer !</p>

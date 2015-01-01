@@ -23,10 +23,10 @@ if(isset($_SESSION['idUser']) && isset($_SESSION['pseudo'])){
     $usersobjonline = array();
     
     foreach($userslist as $user){
-        //if($user->iduser != $_SESSION['idUser']){
+        if($user->iduser != $_SESSION['idUser']){
             $userobj = User::getUserById($user->iduser);
             $usersobjonline[]=$userobj;
-        //}
+        }
     }
     
     //print_r($usersobjonline);

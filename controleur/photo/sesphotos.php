@@ -20,16 +20,22 @@ if(isset($_SESSION['idUser']) && isset($_SESSION['pseudo'])){
         echo '</pre>';
         die();*/
 
+        $error_photo_display = "";
+        
         if($hisphotos != NULL){
 
             $tpl = new raintpl(); //include Rain TPL
             $tpl->assign("photos",$hisphotos); // assign an array
+            $tpl->assign("erreur",$error_photo_display);
             $tpl->draw("photos"); // draw the template
 
         } else{
 
             $error_photo_display = "Il a rien envoyé pour l'instant ... ce CAFARD !!!";
-            
+            $tpl = new raintpl(); //include Rain TPL
+            $tpl->assign("photos",$hisphotos); // assign an array
+            $tpl->assign("erreur",$error_photo_display);
+            $tpl->draw("photos"); // draw the template
         }
     }else {
         

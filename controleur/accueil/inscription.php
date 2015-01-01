@@ -29,7 +29,7 @@ if(!isset($_SESSION['idUser']) && !isset($_SESSION['pseudo'])){
             
         }else {
             
-            $erreurs_inscription = "Pffff !!! ... cris ton pseudo dans la case avant ! CAFARD !!!";
+            $erreurs_inscription = "Pffff !!! ... Ecris ton pseudo dans la case avant ! CAFARD !!!";
             
         }
         
@@ -61,7 +61,13 @@ if(!isset($_SESSION['idUser']) && !isset($_SESSION['pseudo'])){
                 $erreurs_inscription = "Ca passe pas !!";
 
             }
-        }    
+        }
+        
+        // Affichage formulaire
+        $tpl = new raintpl();
+        $tpl->assign("erreurs",$erreurs_inscription);
+        $tpl->assign("macadress",$macadress);
+        $tpl->draw("inscription");
         
     } else {
         
