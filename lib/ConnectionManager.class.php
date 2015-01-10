@@ -13,13 +13,6 @@ class ConnectionManager
     
     private static $instance;
     
-    const DEFAULT_SQL_USER = 'root';
-    const DEFAULT_SQL_PASSWORD = 'root';
-    const DEFAULT_SQL_DTB = 'partypictureshow';
-    const DEFAULT_SQL_HOST = 'localhost';
-    const DEFAULT_SQL_PORT = 3306;
-    
-    
     private function __construct()
     {
       try 
