@@ -3,8 +3,36 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/css/pps.css</file>
-            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/lib/Form.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/modele/User.class.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/modele/Participant.class.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/photo/slideshow.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/photocheck.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/global/init.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/userwarn.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/accueil/panneau.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/photosupp.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/.htaccess</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/screencontrol.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/lib/ConnectionManager.class.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/photo/mesphotos.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/lib/Image.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/accueil.tpl</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/participants.tpl</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/photo/envoi.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/accueil/accueil.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/images/showroom/12_20150103_160935.jpg</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/usersupp.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/connectes.tpl</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/userbann.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/global/bas.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/admin.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/carroussel.tpl</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/modele/Party.class.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/successReceive.tpl</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/envoi.tpl</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/accueil/inscription.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/photo/sesphotos.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/modele/Picture.class.php</file>
         </group>
     </open-files>
 </project-private>

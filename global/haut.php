@@ -22,7 +22,7 @@
 
 <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,13 +41,14 @@
                     <li class=""><a href="/PartyPictureShow?page=photo&action=envoi">Envoyer une tof</a></li>
                     <li class=""><a href="/PartyPictureShow?page=photo&action=slideshow">Slideshow</a></li>
                 </ul>
-            </div><!--/.nav-collapse -->
+            </div>
         </div>
     </div>
-        
-    <header class="page-header">
-        <h1>Soiree Cafard</h1>
-    </header>
     
-        <div class="container">
-            <div class='starter-template'>
+    <div class="container">   
+        <header class="page-header">
+            <h1>Soiree Cafard</h1>
+        </header>
+    
+        
+            

@@ -1,6 +1,7 @@
-<div class="row">
+
     <div id="erreur">{$erreur}</div>
     {loop="photos"}
-        <img class="col-xs-12" src="{$value->path}" alt="{$value->id}"/>
+    <div class="row">    
+        <img class="col-xs-offset-1 col-xs-10 img-responsive" src="{$value->path}" alt="{$value->id}"/>
+    </div>
     {/loop}
-</div>
