@@ -10,6 +10,7 @@
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/global/init.php</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/userwarn.php</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/accueil/panneau.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/global/haut.php</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/photosupp.php</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/.htaccess</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/admin/screencontrol.php</file>
@@ -31,8 +32,10 @@
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/successReceive.tpl</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/envoi.tpl</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/accueil/inscription.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/global/config.php</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/controleur/photo/sesphotos.php</file>
             <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/modele/Picture.class.php</file>
+            <file>file:/Users/lodydody/Documents/Sites/PartyPictureShow/vues/inscription.tpl</file>
         </group>
     </open-files>
 </project-private>

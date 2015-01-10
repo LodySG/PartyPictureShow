@@ -35,11 +35,11 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class=""><a href="/PartyPictureShow?page=accueil&action=accueil">Accueil</a></li>
-                    <li class=""><a href="/PartyPictureShow?page=accueil&action=panneau">Panneau</a></li>
-                    <li class=""><a href="/PartyPictureShow?page=photo&action=mesphotos">Mes Photos</a></li>
-                    <li class=""><a href="/PartyPictureShow?page=photo&action=envoi">Envoyer une tof</a></li>
-                    <li class=""><a href="/PartyPictureShow?page=photo&action=slideshow">Slideshow</a></li>
+                    <li class=""><a href="?page=accueil&action=accueil">Accueil</a></li>
+                    <li class=""><a href="?page=accueil&action=panneau">Panneau</a></li>
+                    <li class=""><a href="?page=photo&action=mesphotos">Mes Photos</a></li>
+                    <li class=""><a href="?page=photo&action=envoi">Envoyer une tof</a></li>
+                    <li class=""><a href="?page=photo&action=slideshow">Slideshow</a></li>
                 </ul>
             </div>
         </div>
